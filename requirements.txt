@@ -1,0 +1,10 @@
+cbor2==5.4.2
+cose==0.9.dev8
+Flask==2.0.2
+Flask_Cors==3.0.10
+opencv_python==4.5.3.56
+Pillow==8.4.0
+PyQRCode==1.2.1
+pyzbar==0.1.8
+qrtools==0.0.2
+gunicorn==20.1.0

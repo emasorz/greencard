@@ -8,3 +8,4 @@ PyQRCode==1.2.1
 pyzbar==0.1.8
 qrtools==0.0.2
 gunicorn==20.1.0
+base45==0.4.3

@@ -16,18 +16,18 @@ import base64
 
 
 UPLOADED_IMAGE_NAME = "image.jpg"
-api = Flask(__name__)
-cors = CORS(api)
-api.config['CORS_HEADERS'] = 'Content-Type'
+app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
-@api.route('/')
+@app.route('/')
 @cross_origin()
 def index():
     return "Hello World"
 
 
 
-@api.route('/verify_qr', methods=['POST'])
+@app.route('/verify_qr', methods=['POST'])
 @cross_origin()
 def verify_qr():
     data = request.get_json() 
@@ -65,4 +65,4 @@ def verify_qr():
         return {"error":"Invalid cant extract qrcode from this image"}
 
 if __name__ == "__main__":        
-    api.run()
+    app.run()

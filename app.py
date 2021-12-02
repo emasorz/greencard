@@ -34,8 +34,11 @@ def verify_qr():
     response = urllib.request.urlopen(data['image'])
     with open(UPLOADED_IMAGE_NAME, 'wb') as f:
         f.write(response.file.read())
-
-    data = decode(Image.open(UPLOADED_IMAGE_NAME))
+    foo = Image.open(UPLOADED_IMAGE_NAME)
+    foo = foo.resize((210,210),Image.ANTIALIAS)
+    
+    print(foo.size)
+    data = decode(foo)
     
     if len(data) > 0:
         raw_str = str(data[0].data)

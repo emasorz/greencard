@@ -35,7 +35,7 @@ def verify_qr():
     with open(UPLOADED_IMAGE_NAME, 'wb') as f:
         f.write(response.file.read())
     foo = Image.open(UPLOADED_IMAGE_NAME)
-    foo = foo.resize((210,210),Image.ANTIALIAS)
+    foo = foo.resize((256,256),Image.ANTIALIAS)
     
     print(foo.size)
     data = decode(foo)
